@@ -1,0 +1,1 @@
+print ("If you you do 2 chaps of pythin per day...u can have a go at kris ass everynight")
