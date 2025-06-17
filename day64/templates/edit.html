@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Edit Movies{% endblock %} {% block content %}
+<div class="container">
+
+  <h2>Edit Movie Details</h2>
+  <form method="POST">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" name="title" class="form-control" value="{{ movie.title }}" required>
+    </div>
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="number" name="year" class="form-control" value="{{ movie.year }}" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea name="description" class="form-control" rows="4" required>{{ movie.description }}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input type="number" step="0.1" name="rating" class="form-control" value="{{ movie.rating }}" required>
+    </div>
+     <div class="form-group">
+      <label for="ranking">Ranking</label>
+      <input type="number" step="0.1" name="ranking" class="form-control" value="{{ movie.ranking }}" required>
+    </div>
+    <div class="form-group">
+      <label for="reviews">Review</label>
+      <textarea name="reviews" class="form-control" rows="3">{{ movie.reviews }}</textarea>
+    </div>
+    <div class="form-group">
+      <label for="img_url">Image URL</label>
+      <input type="url" name="img_url" class="form-control" value="{{ movie.img_url }}" required>
+    </div>
+    <div class="form-group">
+      <label for="trailer_youtube">YouTube Trailer URL</label>
+      <input type="url" name="trailer_youtube" class="form-control" value="{{ movie.trailer_youtube }}" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a href="{{ url_for('home') }}" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+{% endblock %}
