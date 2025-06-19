@@ -6,7 +6,7 @@ w_parameters={
     "appid":"c6f8dc8af455f3dfe99c49d97781ba6d",
     "cnt":4,
 }
-api_key="c6f8dc8af455f3dfe99c49d97781ba6d"
+api_key=
 response=requests.get(url=O_ep, params=w_parameters)
 #print(response.status_code)
 print(response.json())
