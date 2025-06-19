@@ -3,8 +3,8 @@ from datetime import datetime, timedelta
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 C_NAME="apple"
-Y_API_KEY= "KOITZDF89LAUT7ZZ"
-N_API = "0e4d542702d54ea6ae9c50f307b25794"
+Y_API_KEY= 
+N_API = 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query?"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
@@ -20,7 +20,7 @@ param={
     "from": "2025-04-29",
     "to": "2025-04-29",
     "sortBy": "popularity",
-    "apiKey": "0e4d542702d54ea6ae9c50f307b25794"
+    "apiKey": 
 }
 response = requests.get(STOCK_ENDPOINT, params=PARAMETERS)
 response.raise_for_status()  # Raise an error for bad responses (4xx, 5xx)
